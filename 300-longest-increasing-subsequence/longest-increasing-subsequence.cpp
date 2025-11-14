@@ -4,13 +4,13 @@ public:
 
         int n = nums.size();
 
-        if ( n == 1) return 1;
         vector<int> dp(n,1);
-        int maxi=0;
+
+        int maxi=1;
 
         for(int i = 1; i < n; i++){ 
 
-           for(int j = i; j >= 0 ; j--){ 
+           for(int j = i-1; j >= 0 ; j--){ 
              
              if(nums[i] > nums[j]) dp[i] = max(dp[i] , dp[j] + 1 );
              
