@@ -7,15 +7,12 @@ public:
         int n=nums.size();
         while(end<n){ 
             sum=sum+nums[end];
-            if(end-start+1 < k){ 
-                end++;
-            }
-            else{ 
+            if(end-start+1 >= k){ 
                 maxi=max(maxi,double(sum)/(k*1.0));
                 sum-=nums[start];
                 start++;
-                end++;
             }
+            end++;
         }
         return maxi;
     }
