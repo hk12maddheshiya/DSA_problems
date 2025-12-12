@@ -4,8 +4,8 @@ public:
         int start=0, end =0;
         long long sum=0;
         double maxi=INT_MIN;
-        int n=nums.size();
-        while(end<n){ 
+       
+        while(end<nums.size()){ 
             sum=sum+nums[end];
             if(end-start+1 >= k){ 
                 maxi=max(maxi,double(sum)/(k*1.0));
